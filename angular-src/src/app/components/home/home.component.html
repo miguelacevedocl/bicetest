@@ -1,0 +1,26 @@
+<section class="jumbotron">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+           
+          </div>
+
+
+        <div *ngFor="let item of indi | keyvalue">
+            <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.key | uppercase}}</h5>
+                    <p class="card-text"><strong>Name</strong>: {{item.value['name']}}</p>
+                    <p class="card-text"><strong>Value</strong>: {{item.value['value']}}</p>
+                    <p class="card-text"><strong>Unit</strong>: {{item.value['unit']}}</p>
+                    <p class="card-text"><strong>Date</strong>: {{item.value['date'] | date:'longDate'}}</p>
+                  </div>
+                </div>
+              </div>            
+            
+            
+        </div>
+        
+    </div>
+</section>
